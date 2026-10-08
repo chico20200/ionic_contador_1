@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Mi contador
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <div class="contador">
+    <h3>Valor actual</h3>
+     <p>{{contador}}</p>
+
+    <ion-button 
+    color="primary"
+    
+    (click)="aumentar()"
+    >
+    + Aumentar
+    </ion-button>
+
+    <ion-button 
+    color="danger"
+    1
+    (click)="disminuir()"
+    >
+    - Disminuir
+    </ion-button>
+
+    <ion-button 
+    color="medium"
+    [disabled]="contador==0"
+    (click)="reiniciar()"
+    >
+    ⮌ Reiniciar
+    </ion-button>
+
+  </div>
+
+</ion-content>
